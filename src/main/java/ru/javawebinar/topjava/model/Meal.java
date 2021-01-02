@@ -104,19 +104,6 @@ public class Meal extends AbstractBaseEntity {
         this.user = user;
     }
 
-
-    @JsonGetter
-    @JsonView(View.JsonUI.class)
-    @JsonFormat(pattern = DateTimeUtil.DATE_TIME_PATTERN)
-    public LocalDateTime getDateTimeUI() {
-        return dateTime;
-    }
-
-    @DateTimeFormat(pattern = DateTimeUtil.DATE_TIME_PATTERN)
-    public void setDateTimeUI(LocalDateTime dateTime) {
-        this.dateTime = dateTime;
-    }
-
     @Override
     public String toString() {
         return "Meal{" +
